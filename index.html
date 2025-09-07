@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ピラティススタジオ I Bloom | さっぽろ駅徒歩1分のマシンピラティス</title>
+    <meta name="description" content="札幌駅・大通駅すぐのマシンピラティススタジオ I Bloom。初心者も安心の少人数制レッスンで、あなたの理想のボディメイクをサポート。体験レッスン受付中。">
+    <meta name="robots" content="noindex">
+
+    <!-- OGP -->
+    <meta property="og:title" content="ピラティススタジオ I Bloom | さっぽろ駅徒歩1分">
+    <meta property="og:description" content="札幌駅・大通駅すぐのマシンピラティススタジオ。初心者も安心のマンツーマンレッスンで理想のボディメイクを。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibloom-pilates.com/">
+    <meta property="og:image" content="/images/ogp.jpg">
+    
+    <style>
+        :root {
+            --primary: #de8a88;
+            --primary-dark: #C88987;
+            --primary-light: #F5E5E4;
+            --text-dark: #4f4f4f;
+            --text-gray: #565656;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--white);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section with Background Image Support */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.25;
+            background-image: url('image/Image_fx\ \(25\).jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+            width: 90%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+            padding: 0 10px;
+            background: #FFFFFF;
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(222, 165, 164, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(222, 165, 164, 0.5);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-light);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Vision Section */
+        #vision {
+            background: var(--bg-light);
+        }
+        
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .vision-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .vision-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 320px);
+            gap: 2rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .feature-image {
+            height: 200px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Menu */
+        #menu {
+            background: var(--bg-light);
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .menu-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .menu-card.featured {
+            border: 2px solid var(--primary);
+        }
+        
+        .menu-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        .menu-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .menu-price {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .menu-details {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Flow */
+        .flow-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            flex-direction: column ;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Instagram */
+        #instagram {
+            background: var(--bg-light);
+        }
+        
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 767px) {
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .instagram-post {
+            aspect-ratio: 1;
+            background: var(--primary-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .instagram-post:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Instructor */
+        .instructor-card {
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .instructor-image {
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+
+        .instructor-image img {
+            width: 50%;
+            border-radius: 30px;
+        }
+        
+        .instructor-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ */
+        #faq {
+            background: var(--bg-light);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .faq-question::before {
+            content: "Q";
+            background: var(--primary);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Access */
+        .access-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .access-info {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .info-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            flex-direction: column;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: var(--primary);
+            min-width: 100px;
+        }
+        
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+        
+        /* Fixed CTA */
+        .fixed-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 99;
+            display: none;
+        }
+        
+        .fixed-cta-content {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .fixed-cta .btn {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 1rem 0 5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-info {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: none;
+            }
+            
+            .vision-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .flow-step {
+                flex-direction: row;
+            }
+            
+            .access-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .fixed-cta {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .fixed-cta {
+                display: block;
+            }
+            
+            .hero {
+                min-height: 70vh;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">I Bloom</div>
+            <ul class="nav-links">
+                <li><a href="#vision">I Bloomについて</a></li>
+                <li><a href="#features">選ばれる理由</a></li>
+                <li><a href="#menu">料金</a></li>
+                <li><a href="#flow">レッスンまでの流れ</a></li>
+                <li><a href="#instructors">インストラクター</a></li>
+                <li><a href="#access">アクセス</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1>札幌駅すぐ<br>理学療法士監修の<br>パーソナルピラティス</h1>
+            <p class="subtitle">理学療法士の知識ではじめてでも安心<br>あなたに合わせたメニューで変化を実感。</p>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span>✓</span>
+                    <span>さっぽろ駅徒歩1分</span>
+                </div>
+                <div class="hero-feature">
+                    <span>✓</span>
+                    <span>女性専用</span>
+                </div>
+                <div class="hero-feature">
+                    <span>✓</span>
+                    <span>パーソナルピラティス</span>
+                </div>
+                <div class="hero-feature">
+                    <span>✓</span>
+                    <span>初心者歓迎</span>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="https://beauty.hotpepper.jp/kr/slnH000775839/" class="btn btn-primary" target="_blank" rel="noopener">体験予約はこちら</a>
+                <a href="https://line.me/R/ti/p/@129kyjaj" class="btn btn-secondary" target="_blank" rel="noopener">ご質問はLINEまで</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>I Bloomの想い</h2>
+            </div>
+            <div class="vision-content">
+                <div class="vision-text">
+                    <h3>私らしさが花ひらく場所</h3>
+                    <p>I Bloomは、理学療法士による正しい知識と、女性に寄り添うやさしいサポートを大切にしています。
+                        ひとり一人の体調やライフスタイルに合わせたパーソナルレッスンで、姿勢や動きが整うたびに心まで軽やかに。
+                        女性が安心して、自分らしく美しく続けられる場所でありたいと考えています。</p>
+                    <br>
+                    <p>小さな変化の積み重ねが、あなたの大きな自信につながります。
+                            I Bloomは、その一歩一歩を大切に見守り、共に歩んでいきます。</p>
+                </div>
+                <div class="vision-image">
+                    <img src="image/IMG_3879.jpg" alt="I Bloomスタジオの内観">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>選ばれる5つの理由</h2>
+                <!-- <p>あなたの理想を叶える、3つの特徴</p> -->
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <!-- <div class="feature-image"><img src="#" alt=""></div> -->
+                    <div class="feature-content">
+                        <h3>通いやすい駅ちか好立地</h3>
+                        <p>さっぽろ駅から徒歩1分の好アクセス。お仕事帰りや買い物ついでに通いやすい立地です。</p>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <!-- <div class="feature-image"><img src="#" alt=""></div> -->
+                    <div class="feature-content">
+                        <h3>女性専用パーソナルスタジオ</h3>
+                        <p>女性だけの空間で、理学療法士による安心のパーソナル指導。人目を気にせず、自分の身体とゆっくり向き合えるスタジオです。</p>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <!-- <div class="feature-image"><img src="#" alt=""></div> -->
+                    <div class="feature-content">
+                        <h3>理学療法士が担当</h3>
+                        <p>理学療法士は、リハビリや身体のケアを専門に学んできた国家資格保持者。女性特有のお悩みにも寄り添いながら、正しい姿勢や動きを丁寧にお伝えします。</p>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <!-- <div class="feature-image"><img src="#" alt=""></div> -->
+                    <div class="feature-content">
+                        <h3>オーダーメイドレッスン</h3>
+                        <p>姿勢・体幹・産後ケアなど、ひとりひとりに合わせたメニューをご提案。理学療法士の専門的な指導で日常生活でも嬉しい変化を感じられます。</p>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <!-- <div class="feature-image"><img src="#" alt=""></div> -->
+                    <div class="feature-content">
+                        <h3>LINEでのアフターサポート</h3>
+                        <p>レッスン後も気になることを気軽に相談できるサポート体制をご用意しています。体の不調やトレーニング方法の疑問、日常生活でのセルフケアなど、ちょっとしたことでもLINEでご相談いただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>メニュー・料金</h2>
+                <p>あなたのライフスタイルに合わせて選べます</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-badge">まずはこちら</div>
+                    <h3>【初回限定】<br>理学療法士パーソナル<br>マシンピラティス</h3>
+                    <div style="margin: 1rem 0;">
+                        <span style="text-decoration: line-through; color: #999; font-size: 1.2rem;">通常 ¥8,800</span>
+                    </div>
+                    <div class="menu-price">¥3,300<span style="font-size: 0.8rem;">（税込）</span></div>
+                    <div class="menu-details">
+                        <p>60分 / 1回</p>
+                    </div>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000000000/coupon/?utm_source=site&utm_medium=cta&utm_campaign=trial" class="btn btn-primary" style="width: 100%;" target="_blank" rel="noopener">体験予約する</a>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-badge">おすすめ</div>
+                    <h3>月4回コース</h3>
+                    <div style="margin: 1rem 0;">
+                        <span style="text-decoration: line-through; color: #999; font-size: 1.2rem;">通常 ¥8,800</span>
+                        <span style="color: var(--primary); font-size: 0.9rem; margin-left: 0.5rem;">▶︎</span>
+                        <span style="color: var(--primary); font-size: 1.2rem; margin-left: 0.5rem;">1回 ¥5,500</span>
+                    </div>
+                    <div class="menu-price">¥22,000<span style="font-size: 0.8rem;">（税込）</span></div>
+                    <div class="menu-details">
+                        <span>60分 × 4回 / 月</span><span style="font-size: 0.8em; padding-left: 0.5rem;">※振替翌月まで可</span>
+                        <p>週1回のペースで習慣にしたい方へ</p>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <h3>回数券5回コース</h3>
+                    <div style="margin: 1rem 0;">
+                        <span style="text-decoration: line-through; color: #999; font-size: 1.2rem;">通常 ¥8,800</span>
+                        <span style="color: var(--primary); font-size: 0.9rem; margin-left: 0.5rem;">▶︎</span>
+                        <span style="color: var(--primary); font-size: 1.2rem; margin-left: 0.5rem;">1回 ¥6,600</span>
+                    </div>
+                    <div class="menu-price">¥33,000<span style="font-size: 0.8rem;">（税込）</span></div>
+                    <div class="menu-details">
+                        <span>60分 × 5回</span><span style="font-size: 0.8em; padding-left: 0.5rem;">※有効期限半年間</span>
+                        <p>自分のペースで気軽に試したい方へ</p>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-badge">おすすめ</div>
+                    <h3>回数券10回コース</h3>
+                    <div style="margin: 1rem 0;">
+                        <span style="text-decoration: line-through; color: #999; font-size: 1.2rem;">通常 ¥8,800</span>
+                        <span style="color: var(--primary); font-size: 0.9rem; margin-left: 0.5rem;">▶︎</span>
+                        <span style="color: var(--primary); font-size: 1.2rem; margin-left: 0.5rem;">1回 ¥5,500</span>
+                    </div>
+                    <div class="menu-price">¥55,000<span style="font-size: 0.8rem;">（税込）</span></div>
+                    <div class="menu-details">
+                        <span>60分 × 5回</span><span style="font-size: 0.8em; padding-left: 0.5rem;">※有効期限半年間</span>
+                        <p>自分のペースで効果を実感したい方へ</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-gray);">
+                ※最新の料金・空き状況はHotPepperでご確認ください
+            </p>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section id="flow">
+        <div class="container">
+            <div class="section-title">
+                <h2>レッスンまでの流れ</h2>
+                <p>初めての方も安心してご利用いただけます</p>
+            </div>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>ご予約</h3>
+                        <p>HotPepperからご都合の良い日時をご予約ください。</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>ご来店・カウンセリング</h3>
+                        <p>当日は動きやすい服でご来店もしくはご持参ください。※靴下着用必須<br>カウンセリングではお身体の状態や目標をお聞きして、あなたに最適なレッスンプランをご提案します。</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>レッスン開始</h3>
+                        <p>カウンセリングを通して体調や目的を伺い、その上で一人ひとりに合わせたプログラムをスタートします。</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>アフターフォロー</h3>
+                        <p>レッスン後は、ご自宅でできるエクササイズや生活習慣のアドバイスもお伝えします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <!-- <section id="instagram">
+        <div class="container">
+            <div class="section-title">
+                <h2>Instagram</h2>
+                <p>スタジオの日常をお届けしています</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-post">📸</div>
+                <div class="instagram-post">🧘‍♀️</div>
+                <div class="instagram-post">💪</div>
+                <div class="instagram-post">🌸</div>
+                <div class="instagram-post">✨</div>
+                <div class="instagram-post">🏋️‍♀️</div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.instagram.com/i.bloom.pilates/" class="btn btn-secondary" target="_blank" rel="noopener">Instagramをチェック</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Instructors Section -->
+    <section id="instructors">
+        <div class="container">
+            <div class="section-title">
+                <h2>インストラクター</h2>
+                <p>あなたの成長を全力でサポートします</p>
+            </div>
+            <div class="instructor-card">
+                <div class="instructor-image"><img src="image/profile.png" alt=""></div>
+                <h3>Koto（コト）</h3>
+                <!-- <div class="instructor-tags">
+                    <span class="tag">姿勢改善</span>
+                    <span class="tag">ボディメイク</span>
+                    <span class="tag">マタニティ対応</span>
+                </div> -->
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.instagram.com/koto.instructor/" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border: 1px solid var(--primary); border-radius: 20px; transition: all 0.3s;"
+                       target="_blank" 
+                       rel="noopener"
+                       onmouseover="this.style.background='var(--primary-light)'"
+                       onmouseout="this.style.background='transparent'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        @koto.instructor
+                    </a>
+                </div>
+                <div style="margin: 1.5rem 0; color: var(--text-gray);">
+                    <p><strong>【保有資格】</strong></p>
+                    <p>・理学療法士<br>
+                    ・ピラティスインストラクター資格など</p>
+                </div>
+                <p style="line-height: 1.8; text-align: left;">
+                    一人ひとりの身体と丁寧に向き合い、その方に合ったアプローチを大切にしています。『変わりたい』『もっと自分を大切にしたい』という気持ちに寄り添いながら、ピラティスを通して前向きな毎日をサポートします。
+                </p>
+                <p style="line-height: 1.8; padding-top: 10px; text-align: left;">お子さまの発達に関するご相談も承り、安心して過ごせるスタジオ、そして居心地の良さを感じていただけるトレーナーを目指しています。</p>
+                <!-- <a href="https://beauty.hotpepper.jp/kr/slnH000000000/staff/?utm_source=site&utm_medium=cta&utm_campaign=trial" class="btn btn-primary" style="margin-top: 1.5rem;" target="_blank" rel="noopener">Koto指名で予約</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>よくあるご質問</h2>
+                <p>お客様からよくいただく質問にお答えします</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">ピラティスは初めてですが大丈夫ですか？</div>
+                    <div class="faq-answer">
+                        はい、もちろん大丈夫です。パーソナルで一人ひとりのレベルに合わせて丁寧に指導いたします。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">体が硬くても参加できますか？</div>
+                    <div class="faq-answer">
+                        はい、体の硬さは全く問題ありません。むしろ、体が硬い方こそピラティスがおすすめです。無理なく少しずつ柔軟性を高めていけるようサポートいたします。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">どのような服装で行けばよいですか？</div>
+                    <div class="faq-answer">
+                        動きやすい服装であれば大丈夫です。靴下は着用必須になります。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">男性も通えますか？</div>
+                    <div class="faq-answer">
+                        申し訳ございませんが、当スタジオは現在、女性専用スタジオとして運営しております。ただし、ペアピラティスに限り男女でのご参加も可能です。詳しくはホットペッパービューティーの掲載ページをご確認ください。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">キャンセルはできますか？</div>
+                    <div class="faq-answer">
+                        前日までにホットペッパーからキャンセルのご対応が可能となります。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access">
+        <div class="container">
+            <div class="section-title">
+                <h2>スタジオ・アクセス</h2>
+                <p>札幌駅から徒歩1分の好立地</p>
+            </div>
+            <div class="access-content">
+                <div class="access-info">
+                    <div class="info-row">
+                        <div class="info-label">スタジオ名</div>
+                        <div>ピラティススタジオ I Bloom</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">住所</div>
+                        <div>〒060-0002<br>北海道札幌市中央区北二条西3丁目1-24<br>イシガキビル 東室 2階</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">電話番号</div>
+                        <div>
+                            <div>TEL：<a style="color: #4f4f4f;" href="tel:07020039529">070-2003-9529</a></div>
+                        </div>
+                    </div>
+                    <div class="info-row"> 
+                        <div class="info-label">アクセス</div>
+                        <div>
+                            ・JR札幌駅 南口より徒歩1分<br>
+                            ・地下鉄さっぽろ駅 10番出口より徒歩1分
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">営業時間</div>
+                        <div>
+                            10:00〜20:00
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">定休日</div>
+                        <div>不定休　※休業日は<a style="color: #4f4f4f;" href="https://www.instagram.com/i.bloom.pilates/" target="_blank" rel="noopener">公式Instagram</a>をご確認ください。 </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">お支払い</div>
+                        <div>Visa／Mastercard／JCB／American Express／Diners Club／Discover／交通系IC／電子マネー／QRコード決済など </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">駐車場</div>
+                        <div>隣にコインパーキング有り</div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9323867683675!2d141.34977577618923!3d43.06388957113615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b293abc62cfd7%3A0x154e7282744c8fd3!2z44OU44Op44OG44Kj44K544K544K_44K444KqSSBCbG9vbSjjgqLjgqTjg5bjg6vjg7zjg6Ap5pyt5bmM6aeF5YmN5bqX!5e0!3m2!1sja!2sjp!4v1757226175464!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" style="background: var(--primary-light); padding: 3rem 0;">
+        <div class="container" style="text-align: center;">
+            <div class="section-title">
+                <h2 style="margin-bottom: 1rem;">まずは体験レッスンから</h2>
+            </div>
+            <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                初回限定3,300円（税込）で本格的なマシンピラティスを体験<br>
+                カウンセリング付きで、あなたに最適なプランをご提案します
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="https://beauty.hotpepper.jp/kr/slnH000775839/" class="btn btn-primary" target="_blank" rel="noopener">まずは体験してみる</a>
+                <a href="https://line.me/R/ti/p/@129kyjaj" class="btn btn-secondary" target="_blank" rel="noopener">ご質問はLINEまで</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">I Bloom</div>
+                <div class="footer-info">
+                    ピラティススタジオ I Bloom<br>
+                    〒060-0002 北海道札幌市中央区北二条西3丁目1-24 イシガキビル東室2階
+                    <p>&copy; 2025 I Bloom. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed CTA -->
+    <div class="fixed-cta">
+        <div class="fixed-cta-content">
+            <a href="https://beauty.hotpepper.jp/kr/slnH000775839/" class="btn btn-primary" target="_blank" rel="noopener">体験予約はこちら</a>
+            <a href="https://line.me/R/ti/p/@129kyjaj" class="btn btn-secondary" target="_blank" rel="noopener">ご質問はLINEまで</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .menu-card, .flow-step, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // GA4 Event tracking
+        document.querySelectorAll('a[href*="hotpepper"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    const location = this.closest('section')?.id || 'unknown';
+                    gtag('event', 'click_hp_cta', {
+                        'event_category': 'engagement',
+                        'event_label': location
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href*="lin.ee"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    const location = this.closest('section')?.id || 'unknown';
+                    gtag('event', 'click_line_cta', {
+                        'event_category': 'engagement',
+                        'event_label': location
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
